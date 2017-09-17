@@ -71,9 +71,6 @@ class Block
     # for the block based on the inputs given. The most important of these is `previous_hash.to_s` which
     # tells us that this block's existence (identification/id/hash/mojo) is entirely dependent upon
     # the previous block.
-    #
-    # In Ruby: We're first creating an object from the class Digest::SHA256 (Digest::SHA256.new(...)),
-    # and then calling `hexdigest` instance method on the object itself to get the hash.
     @hash = Digest::SHA256.hexdigest(index.to_s + timestamp.to_s + data.to_s + previous_hash.to_s)
   end
 end

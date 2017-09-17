@@ -9,10 +9,10 @@ class Block
   end
 end
 
-# Usage
-b0 = Block.new(index: 0, data: 'It begins', previous_hash: '0')
+# Usage: Generate Blockchain
+b0 = Block.new(index: 0, data: 'Genesis', previous_hash: '0')
 b1 = Block.new(index: b0.index + 1, data: 'First transaction',  previous_hash: b0.hash)
 b2 = Block.new(index: b1.index + 1, data: 'Second transaction', previous_hash: b1.hash)
 
-# Display
+# Display: Blockchain
 [b0, b1, b2].each { |block| p block }
